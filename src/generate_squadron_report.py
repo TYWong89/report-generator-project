@@ -13,16 +13,28 @@ import report_functions as rf
 def generate_squadron_report(squadron_code, output_file):
     """
     Generates a comprehensive activity report for a specific squadron.
-    
+
     Args:
         squadron_code (str): Squadron identifier (e.g., 'VFA-41')
         output_file (str): Path to save the report
     """
     # TODO: PART 1 - Load the data files
-    pass
+    pilots = rf.read_csv_file('../data/pilots.csv')
+    aircraft = rf.read_csv_file('../data/aircraft.csv')
+    flight_logs = rf.read_csv_file('../data/flight_logs.csv')
 
     # TODO: PART 2 - Filter data for the specified squadron
-    pass
+    squadron_pilots = rf.filter_by_field(
+        pilots,
+        'squadron',
+        squadron_code
+    )
+
+    squadron_aircraft = rf.filter_by_field(
+        aircraft,
+        'squadron',
+        squadron_code
+    )
 
     # TODO: PART 3 - Get flights for squadron pilots
     pass
@@ -41,8 +53,8 @@ def generate_squadron_report(squadron_code, output_file):
 if __name__ == '__main__':
     # TODO: Students will customize this to generate reports for different squadrons
     print("Generating squadron activity reports...")
-    
+
     # Example: Generate report for VFA-41 (Black Aces)
-    # generate_squadron_report('VFA-41', '../reports/vfa-41-report.txt')
-    
+    generate_squadron_report('VFA-41', '../reports/vfa-41-report.txt')
+
     print("\nImplement the function above, then uncomment to test!")
