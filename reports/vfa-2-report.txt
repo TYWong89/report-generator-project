@@ -1,0 +1,37 @@
+============================================================
+               VFA-2 SQUADRON ACTIVITY REPORT               
+============================================================
+
+Flight hours and mission breakdown use completed missions.
+
+PERSONNEL ROSTER
+------------------------------------------------------------
+P019 | Lt Daniel Thompson (Blade)
+P020 | Lt Maria Garcia-Lopez (Sidewinder)
+
+AIRCRAFT INVENTORY
+------------------------------------------------------------
+NE-700 | F/A-18E Super Hornet | Active
+NE-701 | F/A-18F Super Hornet | Active
+
+FLIGHT OPERATIONS SUMMARY
+------------------------------------------------------------
+Logged flight records: 198
+Completed missions flown: 176
+Cancelled missions: 22
+Flight hours (completed): 573.0
+Average duration (completed): 3.26 hours
+
+COMPLETED MISSIONS BY TYPE
+------------------------------------------------------------
+Combat: 42
+Patrol: 34
+Reconnaissance: 32
+Training: 38
+Transport: 30
+
+OPERATIONAL STATUS
+------------------------------------------------------------
+Aircraft status as recorded in the supplied inventory:
+Active aircraft: 2
+Aircraft in maintenance: 0

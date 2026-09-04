@@ -1,0 +1,39 @@
+============================================================
+              VFA-25 SQUADRON ACTIVITY REPORT               
+============================================================
+
+Flight hours and mission breakdown use completed missions.
+
+PERSONNEL ROSTER
+------------------------------------------------------------
+P004 | Lt Natasha Garcia (Viper)
+P005 | Capt Robert Johnson (Hawk)
+P006 | Lt Michael Chen (Dragon)
+
+AIRCRAFT INVENTORY
+------------------------------------------------------------
+NK-300 | F/A-18E Super Hornet | Active
+NK-301 | F/A-18E Super Hornet | Maintenance
+NK-302 | F/A-18F Super Hornet | Active
+
+FLIGHT OPERATIONS SUMMARY
+------------------------------------------------------------
+Logged flight records: 283
+Completed missions flown: 240
+Cancelled missions: 43
+Flight hours (completed): 766.8
+Average duration (completed): 3.19 hours
+
+COMPLETED MISSIONS BY TYPE
+------------------------------------------------------------
+Combat: 46
+Patrol: 43
+Reconnaissance: 54
+Training: 50
+Transport: 47
+
+OPERATIONAL STATUS
+------------------------------------------------------------
+Aircraft status as recorded in the supplied inventory:
+Active aircraft: 2
+Aircraft in maintenance: 1

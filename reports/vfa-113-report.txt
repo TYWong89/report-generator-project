@@ -1,0 +1,39 @@
+============================================================
+              VFA-113 SQUADRON ACTIVITY REPORT              
+============================================================
+
+Flight hours and mission breakdown use completed missions.
+
+PERSONNEL ROSTER
+------------------------------------------------------------
+P010 | Lt Jessica Taylor (Storm)
+P011 | Maj Thomas Brown (Falcon)
+P012 | Capt Amanda Davis (Sky)
+
+AIRCRAFT INVENTORY
+------------------------------------------------------------
+AJ-100 | F/A-18E Super Hornet | Active
+AJ-101 | F/A-18E Super Hornet | Active
+AJ-102 | F/A-18F Super Hornet | Maintenance
+
+FLIGHT OPERATIONS SUMMARY
+------------------------------------------------------------
+Logged flight records: 298
+Completed missions flown: 252
+Cancelled missions: 46
+Flight hours (completed): 803.4
+Average duration (completed): 3.19 hours
+
+COMPLETED MISSIONS BY TYPE
+------------------------------------------------------------
+Combat: 49
+Patrol: 53
+Reconnaissance: 48
+Training: 58
+Transport: 44
+
+OPERATIONAL STATUS
+------------------------------------------------------------
+Aircraft status as recorded in the supplied inventory:
+Active aircraft: 2
+Aircraft in maintenance: 1

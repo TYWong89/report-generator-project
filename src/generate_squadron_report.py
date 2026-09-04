@@ -35,20 +35,6 @@ def generate_squadron_report(squadron_code, output_file):
         'squadron',
         squadron_code
     )
-    # temp test check for pt2
-
-    print()
-    print(f"Squadron: {squadron_code}")
-
-    print(
-        f"Assigned pilots: "
-        f"{rf.count_records(squadron_pilots)}"
-    )
-
-    print(
-        f"Assigned aircraft: "
-        f"{rf.count_records(squadron_aircraft)}"
-    )
 
     # TODO: PART 3 - Get flights for squadron pilots
     squadron_flights = []
@@ -61,18 +47,6 @@ def generate_squadron_report(squadron_code, output_file):
         )
 
         squadron_flights.extend(pilot_flights)
-    # Temporary checks for Part 3
-    print()
-
-    print(
-        f"Flight records for {squadron_code}: "
-        f"{rf.count_records(squadron_flights)}"
-    )
-
-    print(
-        "Pilot IDs in those records:",
-        rf.get_unique_values(squadron_flights, 'pilot_id')
-    )
 
     # TODO: PART 4 - Calculate statistics
     completed_flights = rf.filter_by_field(
@@ -86,12 +60,11 @@ def generate_squadron_report(squadron_code, output_file):
         'status',
         'Cancelled'
     )
-     # Count the mission records
+
     logged_missions = rf.count_records(squadron_flights)
     total_missions = rf.count_records(completed_flights)
     cancelled_missions = rf.count_records(cancelled_flights)
 
-    # Calculate hours using completed flights
     total_hours = rf.calculate_total(
         completed_flights,
         'duration_hours'
@@ -101,13 +74,12 @@ def generate_squadron_report(squadron_code, output_file):
         completed_flights,
         'duration_hours'
     )
-     # Find the mission types present in the squadron's logs
+
     mission_types = rf.get_unique_values(
         squadron_flights,
         'mission_type'
     )
 
-    # Count completed missions for each type
     mission_breakdown = {}
 
     for mission_type in mission_types:
@@ -124,7 +96,7 @@ def generate_squadron_report(squadron_code, output_file):
         squadron_flights,
         'mission_type'
     )
-        # Separate aircraft by their recorded status
+
     active_aircraft = rf.filter_by_field(
         squadron_aircraft,
         'status',
@@ -141,41 +113,108 @@ def generate_squadron_report(squadron_code, output_file):
     maintenance_aircraft_count = rf.count_records(
         maintenance_aircraft
     )
-    # Temporary checks for Part 4
-    print()
-    print("PART 4 CHECKS")
-
-    print(f"Logged missions: {logged_missions}")
-    print(f"Completed missions: {total_missions}")
-    print(f"Cancelled missions: {cancelled_missions}")
-
-    print(f"Total flight hours: {total_hours:.1f}")
-    print(f"Average mission duration: {average_duration:.2f}")
-
-    print("Completed missions by type:")
-
-    for mission_type in mission_breakdown:
-        print(
-            f"  {mission_type}: "
-            f"{mission_breakdown[mission_type]}"
-        )
-
-    print(f"Active aircraft: {active_aircraft_count}")
-    print(f"Aircraft in maintenance: {maintenance_aircraft_count}")
-
 
     # TODO: PART 5 - Build the report content
-    pass
+    report_lines = [
+        rf.format_header(
+            f"{squadron_code} SQUADRON ACTIVITY REPORT"
+        ),
+        "",
+        "Flight hours and mission breakdown use completed missions.",
+        "",
+        "PERSONNEL ROSTER",
+        "-" * 60
+    ]
+
+    for pilot in squadron_pilots:
+        pilot_line = (
+            f"{pilot['pilot_id']} | "
+            f"{pilot['rank']} "
+            f"{pilot['first_name']} {pilot['last_name']} "
+            f"({pilot['callsign']})"
+        )
+
+        report_lines.append(pilot_line)
+
+    report_lines.extend([
+        "",
+        "AIRCRAFT INVENTORY",
+        "-" * 60
+    ])
+
+    for plane in squadron_aircraft:
+        aircraft_line = (
+            f"{plane['tail_number']} | "
+            f"{plane['model']} | "
+            f"{plane['status']}"
+        )
+
+        report_lines.append(aircraft_line)
+
+    report_lines.extend([
+        "",
+        "FLIGHT OPERATIONS SUMMARY",
+        "-" * 60,
+        f"Logged flight records: {logged_missions}",
+        f"Completed missions flown: {total_missions}",
+        f"Cancelled missions: {cancelled_missions}",
+        f"Flight hours (completed): {total_hours:.1f}",
+        f"Average duration (completed): "
+        f"{average_duration:.2f} hours"
+    ])
+
+    report_lines.extend([
+        "",
+        "COMPLETED MISSIONS BY TYPE",
+        "-" * 60
+    ])
+
+    for mission_type in mission_breakdown:
+        mission_count = mission_breakdown[mission_type]
+
+        report_lines.append(
+            f"{mission_type}: {mission_count}"
+        )
+
+    report_lines.extend([
+        "",
+        "OPERATIONAL STATUS",
+        "-" * 60,
+        "Aircraft status as recorded in the supplied inventory:",
+        f"Active aircraft: {active_aircraft_count}",
+        f"Aircraft in maintenance: {maintenance_aircraft_count}"
+    ])
+
+    report_content = "\n".join(report_lines) + "\n"
+    print(report_content)
 
     # TODO: PART 6 - Write the report to file
-    pass
-
+    rf.write_report_to_file(
+        output_file,
+        report_content
+    )
 
 # Main execution
 if __name__ == '__main__':
     # TODO: Students will customize this to generate reports for different squadrons
     print("Generating squadron activity reports...")
+    squadron_codes = [
+        'VFA-41',
+        'VFA-25',
+        'VFA-154',
+        'VFA-113',
+        'VFA-14',
+        'VFA-192',
+        'VFA-2'
+    ]
 
-    # Example: Generate report for VFA-41 (Black Aces)
-    generate_squadron_report('VFA-41', '../reports/vfa-41-report.txt')
+    for squadron_code in squadron_codes:
+        output_file = (
+            f"../reports/{squadron_code.lower()}-report.txt"
+        )
+
+        generate_squadron_report(
+            squadron_code,
+            output_file
+        )
     print("Report generation complete.")

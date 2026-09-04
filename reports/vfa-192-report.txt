@@ -1,0 +1,39 @@
+============================================================
+              VFA-192 SQUADRON ACTIVITY REPORT              
+============================================================
+
+Flight hours and mission breakdown use completed missions.
+
+PERSONNEL ROSTER
+------------------------------------------------------------
+P016 | Maj Lisa White (Cobra)
+P017 | Lt Richard Harris (Ghost)
+P018 | Capt Karen Martin (Raptor)
+
+AIRCRAFT INVENTORY
+------------------------------------------------------------
+NJ-600 | F/A-18E Super Hornet | Active
+NJ-601 | F/A-18E Super Hornet | Active
+NJ-602 | F/A-18F Super Hornet | Maintenance
+
+FLIGHT OPERATIONS SUMMARY
+------------------------------------------------------------
+Logged flight records: 295
+Completed missions flown: 247
+Cancelled missions: 48
+Flight hours (completed): 786.5
+Average duration (completed): 3.18 hours
+
+COMPLETED MISSIONS BY TYPE
+------------------------------------------------------------
+Combat: 44
+Patrol: 56
+Reconnaissance: 46
+Training: 54
+Transport: 47
+
+OPERATIONAL STATUS
+------------------------------------------------------------
+Aircraft status as recorded in the supplied inventory:
+Active aircraft: 2
+Aircraft in maintenance: 1

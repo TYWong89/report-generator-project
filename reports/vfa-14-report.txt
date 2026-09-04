@@ -1,0 +1,39 @@
+============================================================
+              VFA-14 SQUADRON ACTIVITY REPORT               
+============================================================
+
+Flight hours and mission breakdown use completed missions.
+
+PERSONNEL ROSTER
+------------------------------------------------------------
+P013 | Lt James Wilson (Ace)
+P014 | Lt Jennifer Moore (Blaze)
+P015 | Capt William Jackson (Jet)
+
+AIRCRAFT INVENTORY
+------------------------------------------------------------
+NH-500 | F/A-18E Super Hornet | Active
+NH-501 | F/A-18E Super Hornet | Active
+NH-502 | F/A-18F Super Hornet | Active
+
+FLIGHT OPERATIONS SUMMARY
+------------------------------------------------------------
+Logged flight records: 335
+Completed missions flown: 296
+Cancelled missions: 39
+Flight hours (completed): 960.7
+Average duration (completed): 3.25 hours
+
+COMPLETED MISSIONS BY TYPE
+------------------------------------------------------------
+Combat: 66
+Patrol: 61
+Reconnaissance: 62
+Training: 54
+Transport: 53
+
+OPERATIONAL STATUS
+------------------------------------------------------------
+Aircraft status as recorded in the supplied inventory:
+Active aircraft: 3
+Aircraft in maintenance: 0

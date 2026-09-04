@@ -1,0 +1,39 @@
+============================================================
+              VFA-41 SQUADRON ACTIVITY REPORT               
+============================================================
+
+Flight hours and mission breakdown use completed missions.
+
+PERSONNEL ROSTER
+------------------------------------------------------------
+P001 | Capt Peter Mitchell (Maverick)
+P002 | Lt Bradley Bradshaw (Rooster)
+P003 | Maj Sarah Blackwood (Phoenix)
+
+AIRCRAFT INVENTORY
+------------------------------------------------------------
+NE-400 | F/A-18E Super Hornet | Active
+NE-401 | F/A-18E Super Hornet | Active
+NE-402 | F/A-18F Super Hornet | Active
+
+FLIGHT OPERATIONS SUMMARY
+------------------------------------------------------------
+Logged flight records: 286
+Completed missions flown: 241
+Cancelled missions: 45
+Flight hours (completed): 775.8
+Average duration (completed): 3.22 hours
+
+COMPLETED MISSIONS BY TYPE
+------------------------------------------------------------
+Combat: 46
+Patrol: 45
+Reconnaissance: 55
+Training: 44
+Transport: 51
+
+OPERATIONAL STATUS
+------------------------------------------------------------
+Aircraft status as recorded in the supplied inventory:
+Active aircraft: 3
+Aircraft in maintenance: 0
